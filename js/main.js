@@ -84,6 +84,7 @@ function actualizarResumen(lista) {
     `;
 }
 
+// Sincronizacion en tiempo real
 // Renderizado dinámico en el DOM
 function renderizarProductos(lista) {
     contenedorProductos.innerHTML = "";
