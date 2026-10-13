@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Entrega 8 - Sincronización de Estado y Storage</title>
+    <!-- Vinculación de hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulador de Inventario y Presupuesto</h1>
+            <p>Gestión dinámica con persistencia en LocalStorage y operadores modernos</p>
+        </header>
+
+        <!-- Mensaje de feedback visual para el usuario -->
+        <div id="mensaje-feedback" class="feedback oculto"></div>
+
+        <!-- Formulario para agregar nuevos productos -->
+        <section class="card">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="formulario-producto" class="form-grid">
+                <div class="form-group">
+                    <label for="input-nombre">Nombre del Producto:</label>
+                    <input type="text" id="input-nombre" placeholder="Ej: Harina" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-precio">Precio Base ($):</label>
+                    <input type="number" id="input-precio" placeholder="Ej: 1200" min="1" step="any" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-stock">Stock Unidades:</label>
+                    <input type="number" id="input-stock" placeholder="Ej: 10" min="0" step="1" required>
+                </div>
+                <button type="submit" id="btn-agregar" class="btn btn-primary">➕ Agregar al Stock</button>
+            </form>
+        </section>
+
+        <!-- Filtro con evento de teclado y acciones de almacenamiento -->
+        <section class="card">
+            <div class="header-acciones">
+                <h2>Buscar e Interpolar Productos</h2>
+                <button id="btn-vaciar" class="btn btn-outline-danger">🗑️ Vaciar Inventario</button>
+            </div>
+            <div class="form-group">
+                <label for="input-busqueda">Filtrar por nombre (evento de teclado):</label>
+                <input type="text" id="input-busqueda" placeholder="Escribe para buscar en tiempo real...">
+            </div>
+            <!-- Totalizador con reduce() y destructuring -->
+            <div id="resumen-inventario" class="resumen-box">
+                <!-- Se inyecta dinámicamente con JS -->
+            </div>
+        </section>
+
+        <!-- Contenedor dinámico del inventario -->
+        <section class="card">
+            <h2>Listado de Inventario</h2>
+            <div id="contenedor-productos" class="grid-productos">
+                <!-- Se renderiza dinámicamente desde JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Vinculación del script principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>

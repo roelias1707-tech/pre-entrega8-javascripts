@@ -1,0 +1,222 @@
+/* ESTILOS GENERALES Y LAYOUT */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+}
+
+/* COMPONENTE CARD */
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: #34495e;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+}
+
+.header-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header-acciones h2 {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+/* FORMULARIOS Y CAMPOS DE ENTRADA */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* BOTONES CON TRANSICIONES DE TIEMPO CALIBRADAS (0.3s) */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #219150;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-outline-danger {
+    background-color: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+.btn-outline-danger:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* FEEDBACK VISUAL CON TRANSICIÓN FLUIDA DE 0.3s */
+.feedback {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feedback.exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.oculto {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* CAJA DE RESUMEN (REDUCE) */
+.resumen-box {
+    background-color: #ebf5fb;
+    border-left: 4px solid #3498db;
+    padding: 10px 15px;
+    font-weight: 600;
+    color: #2980b9;
+    margin-top: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+/* GRID DE PRODUCTOS RENDERIZADOS */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.producto-card {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.producto-card h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.producto-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.producto-card .acciones {
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
